@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <aside class="sidebar">
+        <aside id="sidebar" class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-header__logo">
                     <div class="sidebar-header-logo">
@@ -28,9 +28,9 @@
                 <div class="sidebar-menu__company-block">
                     <div class="sidebar-menu__subtitle sidebar-menu-sibtitle">
                         <p class="sidebar-menu-sibtitle__title">КОМПАНИЯ</p>
-                        <img class="sidebar-menu-sibtitle__img" src="/src/icons/sidebar-icons/angle-right - FontAwesome.svg" alt="">
+                        <img class="sidebar-menu-sibtitle__img sidebar-menu-sibtitle__img_reverse" src="/src/icons/sidebar-icons/angle-right - FontAwesome.svg" alt="">
                     </div>
-                    <ul class="sidebar-menu__list sidebar-menu-list">
+                    <ul id="company-list" class="sidebar-menu__list sidebar-menu-list hiden">
                         <li class="sidebar-menu-list__link">
                             <img style="fill: red;" src="/src/icons/sidebar-icons/sidebar-menu/company.svg" alt="">
                             <a>Компания</a>
@@ -60,9 +60,9 @@
                 <div class="sidebar-menu__trust-management-block">
                     <div class="sidebar-menu__subtitle sidebar-menu-sibtitle">
                         <p class="sidebar-menu-sibtitle__title">ДОВЕРИТЕЛЬНОЕ УПРАВЛЕНИЕ</p>
-                        <img class="sidebar-menu-sibtitle__img" src="/src/icons/sidebar-icons/angle-right - FontAwesome.svg" alt="">
+                        <img class="sidebar-menu-sibtitle__img sidebar-menu-sibtitle__img_reverse" src="/src/icons/sidebar-icons/angle-right - FontAwesome.svg" alt="">
                     </div>
-                    <ul class="sidebar-menu__list sidebar-menu-list">
+                    <ul id="trust-manager-list" class="sidebar-menu__list sidebar-menu-list hiden">
                         <li class="sidebar-menu-list__link">
                             <img style="fill: red;" src="/src/icons/sidebar-icons/sidebar-menu/organization.svg" alt="">
                             <a>Организации</a>
@@ -78,14 +78,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="sidebar-footer">
-
+            <div id="sidebar-footer" class="sidebar-footer">
+                <p>Свернуть панель</p>
             </div>
         </aside>
 
-        <div class="content">
-            <h1>Home page</h1>
-        </div>
+        <div id="content" class="content"></div>
     </div>
     <script src="/src/js/home-page.js"></script>
 </body>

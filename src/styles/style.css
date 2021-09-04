@@ -46,7 +46,6 @@ body {
 .wrapper {
     width: 1200px;
     margin: 0 auto;
-    border: 1px solid red;
     height: 100%;
     display: flex;
 }
@@ -59,6 +58,11 @@ body {
     width: 246px;
     background: #25262D;
     color: #778192;
+    display: flex;
+    flex-direction: column;
+}
+.hiden {
+    display: none;
 }
 .sidebar-header {
     display: flex;
@@ -90,6 +94,10 @@ body {
 .sidebar-menu {
     font-size: 15px;
     padding: 0 16px 0;
+    flex: 1 0 auto;
+}
+.sidebar-menu__company-block {
+    margin: 0 0 37px 0;
 }
 .sidebar-menu__subtitle {
     display: flex;
@@ -101,8 +109,11 @@ body {
     font-size: 11px;
     color: #B9C1CE;
 }
-.sidebar-menu-sibtitle__img {
+.sidebar-menu-sibtitle__img_reverse {
     transform: rotate(-180deg);
+}
+.sidebar-menu-sibtitle__img:hover {
+    cursor: pointer;
 }
 .sidebar-menu-list__link {
     height: 48px;
@@ -127,6 +138,23 @@ body {
 
 /* -----------------1.3 sidebar footer----start----------------- */
 
+.sidebar-footer {
+    height: 48px;
+    box-shadow: inset 0px 1px 0px #393A42;
+    text-align: center;
+    position: relative;
+}
+.sidebar-footer p {
+    line-height: 48px;
+    cursor: pointer;
+}
+.sidebar-footer p::before {
+    content: url(/src/icons/sidebar-icons/sidebar-menu/leftarrowinacircle.svg);
+    position: absolute;
+    top: 5px;
+    left: 32px;
+}
+
 /* -----------------1.3 sidebar footer----end------------------- */
 /* --------------------------1 sidebar----end------------------- */
 
@@ -135,6 +163,9 @@ body {
 .content {
     width: 954px;
     background: #E5E5E5;
+}
+.content_max {
+    width: 1200px;
 }
 
 /* -----------------------2 content-------end------------------- */
