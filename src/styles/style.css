@@ -78,13 +78,15 @@ body {
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-
 }
 .sidebar-header__titile {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 19px;
+}
+.sidebar-header__settings img {
+    cursor: pointer;
 }
 
 /* -------------------1.1 sidebar-header----end----------------- */
@@ -121,16 +123,11 @@ body {
 }
 .sidebar-menu-list__link:hover {
     background: #393A42;
+    color: #fff;
     border-radius: 5px;
     cursor: pointer;
 }
 .sidebar-menu-list__link img {
-    margin: 0 18px 0 0;
-}
-.sidebar-menu-list__link:first-child img {
-    margin: 0 22px 0 4px;
-}
-.sidebar-menu__trust-management-block .sidebar-menu-list__link:first-child img {
     margin: 0 18px 0 0;
 }
 
@@ -149,9 +146,9 @@ body {
     cursor: pointer;
 }
 .sidebar-footer p::before {
-    content: url(/src/icons/sidebar-icons/sidebar-menu/leftarrowinacircle.svg);
+    content: url(/src/icons/sidebar-icons/hiden\ left.svg);
     position: absolute;
-    top: 5px;
+    top: 3px;
     left: 32px;
 }
 
