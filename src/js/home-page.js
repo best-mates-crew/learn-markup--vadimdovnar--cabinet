@@ -33,7 +33,7 @@ for (let i = 0; i < sidebarMenuLink.length; i++) {
     sidebarMenuLink[i].addEventListener('mouseout', changesColorToDark);
 }
 
-let count = 0;
+
 function changesColorToLight(e) {
     let elem = initElem(e);
     let newSrc = elem.src.replace('.svg', '1.svg');
@@ -48,15 +48,20 @@ function changesColorToDark(e) {
 
 function initElem(e) {
     let elem;
-    if (e.target.tagName.toLowerCase() === 'li') {
-        elem = e.target.firstElementChild;
-        return elem;
-    } else if (e.target.tagName.toLowerCase() === 'a'){
-        elem = e.target.previousElementSibling;
-        return elem;
-    } else if (e.target.tagName.toLowerCase() === 'img') {
-        elem = e.target;
-        return elem;
+    
+    switch(e.target.tagName.toLowerCase()) {
+        case 'li':
+            elem = e.target.firstElementChild;
+            break;
+        case 'a':
+            elem = e.target.previousElementSibling;
+            break;
+        case 'img' :
+            elem = e.target;
+            break;
+        default:
+            break
     }
+    return elem;
 }
 // --------------------------------------------------------------------------------------
