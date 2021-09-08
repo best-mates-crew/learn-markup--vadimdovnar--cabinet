@@ -26,13 +26,12 @@ sidebarFooter.onclick = function() {
 
 
 // --------this logic allows you to change the behavior of list items and change their state to active when hovering and deactivate when focus is lost------
-let sidebarMenuLink = document.querySelectorAll('.sidebar-menu-list__link');
+    let sidebarMenuLink = [...document.querySelectorAll('.sidebar-menu-list__link')];
 
-for (let i = 0; i < sidebarMenuLink.length; i++) {
-    sidebarMenuLink[i].addEventListener('mouseover', changesColorToLight);
-    sidebarMenuLink[i].addEventListener('mouseout', changesColorToDark);
-}
-
+    sidebarMenuLink.forEach(elem => {
+        elem.addEventListener('mouseover', changesColorToLight);
+        elem.addEventListener('mouseout', changesColorToDark);
+    });
 
 function changesColorToLight(e) {
     let elem = initElem(e);
