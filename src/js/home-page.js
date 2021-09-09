@@ -12,16 +12,17 @@ for (let i = 0; i < elementsOpenAndClose.length; i++) {
 
 
 // ---------------------this logic hides the sidebar------------------------
-let sidebarFooter = document.querySelector('#sidebar-footer');
 
-sidebarFooter.onclick = function() {
+const closeNavbar = document.getElementById('close-navbar');
+
+closeNavbar.addEventListener('click', function(e) {
     let sidebar = document.querySelector('#sidebar');
     let contentBox = document.querySelector('#content')
     if (!sidebar.classList.contains('hiden')) {
         sidebar.classList.add('hiden');
         contentBox.classList.add('content_max');
     }
-}
+})
 // ----------------------this logic hides the sidebar------------------------
 
 
